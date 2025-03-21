@@ -1,0 +1,70 @@
+from pymongo import MongoClient
+import json
+from bson import ObjectId
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+# Access the environment variables
+database_uri = os.getenv('DATABASE_URI')
+db_name = os.getenv('DB_NAME')
+collection_1 = os.getenv('DB_COLLECTION_1')
+collection_2 = os.getenv('DB_COLLECTION_2')
+collection_3 = os.getenv('DB_COLLECTION_3')
+
+# Connect to MongoDB (local instance by default)
+client = MongoClient(database_uri)  # Default MongoDB URI
+
+# Create or switch to your desired database
+db = client[db_name]
+
+# Create or switch to your desired collection
+collection_1 = db[collection_1]
+collection_2 = db[collection_2]
+collection_3 = db[collection_3]
+
+# Open and read the JSON file
+with open('../phase2-data/data/mouse_movements/humans/mouse_movements_humans.json') as f:
+    # Loop through each line in the file
+    for line in f:
+        # Parse the line as a JSON object
+        data = json.loads(line.strip())
+        if '_id' in data and isinstance(data['_id'], dict) and '$oid' in data['_id']:
+            # Convert the $oid string to ObjectId
+            data['_id'] = ObjectId(data['_id']['$oid'])
+        
+        # Insert the data into the collection
+        collection_1.insert_one(data)
+
+print(f"Data inserted successfully into {db_name} -> {collection_1}")
+
+# Open and read the JSON file
+with open('../phase2-data/data/mouse_movements/bots/mouse_movements_moderate_bots.json') as f:
+    # Loop through each line in the file
+    for line in f:
+        # Parse the line as a JSON object
+        data = json.loads(line.strip())
+        if '_id' in data and isinstance(data['_id'], dict) and '$oid' in data['_id']:
+            # Convert the $oid string to ObjectId
+            data['_id'] = ObjectId(data['_id']['$oid'])
+        
+        # Insert the data into the collection
+        collection_2.insert_one(data)
+
+print(f"Data inserted successfully into {db_name} -> {collection_2}")
+
+# Open and read the JSON file
+with open('../phase2-data/data/mouse_movements/bots/mouse_movements_advanced_bots.json') as f:
+    # Loop through each line in the file
+    for line in f:
+        # Parse the line as a JSON object
+        data = json.loads(line.strip())
+        if '_id' in data and isinstance(data['_id'], dict) and '$oid' in data['_id']:
+            # Convert the $oid string to ObjectId
+            data['_id'] = ObjectId(data['_id']['$oid'])
+        
+        # Insert the data into the collection
+        collection_3.insert_one(data)
+
+print(f"Data inserted successfully into {db_name} -> {collection_3}")
