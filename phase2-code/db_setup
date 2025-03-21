@@ -4,6 +4,10 @@ from bson import ObjectId
 from dotenv import load_dotenv
 import os
 
+# Before running this script
+# ensure that MongoDB is installed on your device and activated
+# and set up .env variables
+
 load_dotenv()
 
 # Access the environment variables
@@ -12,6 +16,9 @@ db_name = os.getenv('DB_NAME')
 collection_1 = os.getenv('DB_COLLECTION_1')
 collection_2 = os.getenv('DB_COLLECTION_2')
 collection_3 = os.getenv('DB_COLLECTION_3')
+filename_1 = os.getenv('FILENAME_1')
+filename_2 = os.getenv('FILENAME_2')
+filename_3 = os.getenv('FILENAME_3')
 
 # Connect to MongoDB (local instance by default)
 client = MongoClient(database_uri)  # Default MongoDB URI
@@ -24,8 +31,8 @@ collection_1 = db[collection_1]
 collection_2 = db[collection_2]
 collection_3 = db[collection_3]
 
-# Open and read the JSON file
-with open('../phase2-data/data/mouse_movements/humans/mouse_movements_humans.json') as f:
+# Open and read the humans JSON file
+with open(filename_1) as f:
     # Loop through each line in the file
     for line in f:
         # Parse the line as a JSON object
@@ -39,8 +46,8 @@ with open('../phase2-data/data/mouse_movements/humans/mouse_movements_humans.jso
 
 print(f"Data inserted successfully into {db_name} -> {collection_1}")
 
-# Open and read the JSON file
-with open('../phase2-data/data/mouse_movements/bots/mouse_movements_moderate_bots.json') as f:
+# Open and read the moderate bots JSON file
+with open(filename_2) as f:
     # Loop through each line in the file
     for line in f:
         # Parse the line as a JSON object
@@ -54,8 +61,8 @@ with open('../phase2-data/data/mouse_movements/bots/mouse_movements_moderate_bot
 
 print(f"Data inserted successfully into {db_name} -> {collection_2}")
 
-# Open and read the JSON file
-with open('../phase2-data/data/mouse_movements/bots/mouse_movements_advanced_bots.json') as f:
+# Open and read the advanced bots JSON file
+with open(filename_3) as f:
     # Loop through each line in the file
     for line in f:
         # Parse the line as a JSON object
