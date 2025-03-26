@@ -1,0 +1,27 @@
+Document on merged data
+
+weblog_p1p2: combined weblog df for p1 and p2
+datetime, method, url, protocol, status, byte_size, referrer, Session_ID, user_agent, category
+(same as previously)
+
+df_mouse_p1p2: combined mouse df for p1 and p2
+session_id: primary key
+mousemove_times: the timestamp of when each mouse move was performed
+mousemove_type: m for movement, c for click
+mousemove_behavior: coordinates in the form (x, y)
+label: moderate_bot, advanced_bot, or human
+mousemove_client_height_width: (x, y) for those rows from phase 2, NaN for rows from phase 1
+
+mouse_weblog_merge: mouse df with some columns from weblog df
+session_id
+mousemove_times
+mousemove_type
+mousemove_behavior
+label
+mousemove_client_height_width
+status_mode: mode value of status for that session_id
+user_agent
+avg_byte_size: average byte size for that session_id
+
+* this df is not saved but code is in the ipynb under the text header “mouse_weblog_merge: mouse df with some columns from weblog df” all the way below
+* not enough ram to run in collab or jupyter notebook
