@@ -2,3 +2,4 @@ venv/
 data/raw/web_bot_detection_dataset
 data/interim/weblog
 data/interim/unzipped
+.DS_Store
