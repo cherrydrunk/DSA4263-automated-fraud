@@ -2,4 +2,6 @@ venv/
 data/raw/web_bot_detection_dataset
 data/interim/weblog
 data/interim/unzipped
+data/interim/mousemovement_data
+data/interim/weblog_data
 .DS_Store
