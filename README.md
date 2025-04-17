@@ -31,7 +31,7 @@ cd DSA4263-automated-fraud
 pip install -r requirements.txt
 ```
 ## About the dataset
-This is a labelled dataset designed to support web bot detection research to distinguish between human visitors and web bots. The dataset was created by the Multimodal Data Fusion and Analytics (M4D) group, consisting of scientists and researchers.(Iliou et al., 2021) The data was gathered through a web server that hosted web pages retrieved from Wikipedia and included details such as mouse movement coordinates, click patterns, and web logs.
+This is a labelled dataset designed to support web bot detection research to distinguish between human visitors and web bots. The dataset was created by the Multimodal Data Fusion and Analytics (M4D) group, consisting of scientists and researchers (Iliou et al., 2021). The data was gathered through a web server that hosted web pages retrieved from Wikipedia and included details such as mouse movement coordinates, click patterns, and web logs.
 
 More information on the dataset can be found here: https://m4d.iti.gr/web-bot-detection-dataset/
 
