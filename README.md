@@ -20,6 +20,16 @@ This project applies a machine learning approach to bot fraud detection based on
 └── requirements.txt     <- The requirements file for reproducing the analysis environment, 
                             e.g. generated with `pip freeze > requirements.txt
 ```
+## Installation
+### Prerequisites
+- Python 3.8+ (or later)
+
+### Steps
+```bash
+git clone https://github.com/cherrydrunk/DSA4263-automated-fraud.git
+cd DSA4263-automated-fraud
+pip install -r requirements.txt
+```
 
 ## Acknowledgements
 Dataset derived from the Multimodal Data Fusion and Analytics Group
