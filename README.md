@@ -1,5 +1,8 @@
 # DSA4263-automated-fraud
-DSA4263 Project on Automated Fraud
+DSA4263 Project on Automated Fraud Detection
+
+## Project Description
+This project applies a machine learning approach to bot fraud detection
 
 ## Project Structure & Flow
 
@@ -18,3 +21,5 @@ DSA4263 Project on Automated Fraud
                             e.g. generated with `pip freeze > requirements.txt
 ```
 
+## Acknowledgements
+Dataset derived from Multimodal Data Fusion and Analytics Group
