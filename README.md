@@ -22,4 +22,4 @@ This project applies a machine learning approach to bot fraud detection
 ```
 
 ## Acknowledgements
-Dataset derived from Multimodal Data Fusion and Analytics Group
+Dataset derived from the Multimodal Data Fusion and Analytics Group
