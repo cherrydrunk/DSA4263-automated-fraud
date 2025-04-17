@@ -2,7 +2,7 @@
 DSA4263 Project on Automated Fraud Detection
 
 ## Project Description
-This project applies a machine learning approach to bot fraud detection
+This project applies a machine learning approach to bot fraud detection based on session behavior and metadata
 
 ## Project Structure & Flow
 
