@@ -32,4 +32,4 @@ pip install -r requirements.txt
 ```
 
 ## Acknowledgements
-Dataset derived from the Multimodal Data Fusion and Analytics Group
+The dataset is derived from the Multimodal Data Fusion and Analytics Group. All rights to the dataset belong to the original authors.
